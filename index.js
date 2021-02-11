@@ -77,11 +77,11 @@ function buildPage(answers) {
     var title = `# ${answers.title} ${licenseBadge}\n`
     var tableOfContents = `## Table of Contents:\n\n[Description](#Description)\n\n[Installation](#Installation-instructions)\n\n[Usage Information](#Usage-Information)\n\n[Contribution Guidelines](#Contribution-Guidelines)\n\n[Test Instructions](#Test-Instructions)\n\n[Contact Information](#Questions)`
     var description = `## Description \n${answers.description}\n`
-    var install = `## Installation Instructions \n To install the necessary dependencies, run the following command: \n${answers.install}\n`
+    var install = `## Installation Instructions \nTo install the necessary dependencies, run the following command: \n\n${answers.install}\n`
     var usage = `## Usage Information \n${answers.usage}\n`
-    var license = `## License \n This project is licensed under the ${answers.license} license`
+    var license = `## License \nThis project is licensed under the ${answers.license} license`
     var contribution = `## Contribution Guidelines \n${answers.contribution}\n`
-    var test = `## Test Instructions \n To run tests, run the following command: \n ${answers.test}\n`
+    var test = `## Test Instructions \nTo run tests, run the following command: \n\n${answers.test}\n`
     var contact = `## Questions? \nMy GitHub is: github.com/${answers.username} \n\nOr you can email me at: ${answers.email}\n`
     var final = title + "\n" +tableOfContents + "\n" + description + "\n" + install + "\n" + usage + "\n" + license + "\n" + contribution + "\n" + test + "\n" + contact
     fs.writeFileSync("ReadMe.md", final)
